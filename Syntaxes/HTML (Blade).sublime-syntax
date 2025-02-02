@@ -107,6 +107,8 @@ contexts:
 
   tag-attributes:
     - meta_prepend: true
+    - include: Blade.sublime-syntax#blade-php-directives
+    - include: Blade.sublime-syntax#blade-other-directives
     - include: tag-blade-attributes
 
   tag-generic-attribute:

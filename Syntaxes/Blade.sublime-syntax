@@ -18,19 +18,20 @@ variables:
 
   directive_keywords: |-
     (?x: acfrepeater | auth | block | break | can | canany | cannot | case
-    | choice | class | component | continue | dd | debug | dump | each | elsecan
-    | elsecanany | elsecannot | elseif | embed | empty | env | error | extends
-    | feature | for | foreach | forelse | guest | hasSection | hipchat | if | include
-    | includeFirst | includeIf | includeUnless | includeWhen | inject | isset
-    | js | lang | layout | livewire | macro | macrodef | method | minify
-    | partial | php | push | render | section | servers | set | slack | slot
-    | stack | story | switch | task | unless | unset | while | wpposts | yield )
+    | choice | class | component | continue | dd | debug | disabled | dump | each
+    | elsecan | elsecanany | elsecannot | elseif | embed | empty | env | error
+    | extends | feature | for | foreach | forelse | guest | hasSection | hipchat
+    | if | include | includeFirst | includeIf | includeUnless | includeWhen | inject
+    | isset | js | lang | layout | livewire | macro | macrodef | method | minify
+    | partial | php | props | push | readonly | render | required | section | servers
+    | set | slack | slot | stack | story | style | switch | task | unless | unset
+    | use | while | wpposts | yield )
 
   bare_directive_keywords: |-
     (?x: acfend | after | append | auth | break | breakpoint | continue | csrf
     | default | else | empty | endafter | endauth | endblock | endcan | endcanany
-    | endcannot | endcomponent | endembed | endempty | endempty | endenv
-    | enderror | endfeature | endfor | endforeach | endforelse | endguest | endif | endisset
+    | endcannot | endcomponent | endembed | endempty | endempty | endenv | enderror
+    | endfeature | endfor | endforeach | endforelse | endguest | endif | endisset
     | endmacro | endmarkdown | endminify | endonce | endpartial | endproduction
     | endpush | endsection | endsetup | endslot | endstory | endswitch | endtask
     | endunless | endverbatim | endwhile | guest | livewireScripts

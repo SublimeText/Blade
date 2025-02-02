@@ -104,6 +104,11 @@
 			"details": "Laravel Blade Directive",
 		},
 		{
+			"trigger": "disabled",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
 			"trigger": "dump",
 			"kind": "keyword",
 			"details": "Laravel Blade Directive",
@@ -484,12 +489,27 @@
 			"details": "Laravel Blade Directive",
 		},
 		{
+			"trigger": "props",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
 			"trigger": "push",
 			"kind": "keyword",
 			"details": "Laravel Blade Directive",
 		},
 		{
+			"trigger": "readonly",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
 			"trigger": "render",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "required",
 			"kind": "keyword",
 			"details": "Laravel Blade Directive",
 		},
@@ -544,6 +564,11 @@
 			"details": "Laravel Blade Directive",
 		},
 		{
+			"trigger": "style",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
 			"trigger": "switch",
 			"kind": "keyword",
 			"details": "Laravel Blade Directive",
@@ -560,6 +585,11 @@
 		},
 		{
 			"trigger": "unset",
+			"kind": "keyword",
+			"details": "Laravel Blade Directive",
+		},
+		{
+			"trigger": "use",
 			"kind": "keyword",
 			"details": "Laravel Blade Directive",
 		},

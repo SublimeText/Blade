@@ -212,6 +212,20 @@
 {{--                              ^ punctuation.section.arguments.end.blade - source.php --}}
     </div>
 
+{{-- Use External PHP --}}
+
+    @use('App\Models\Flight', 'FlightModel')
+{{--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.embedded.blade source.blade --}}
+{{--^^^^ meta.directive.blade keyword.control.directive.blade --}}
+{{--^ punctuation.definition.keyword.blade --}}
+{{--    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.directive.arguments.blade --}}
+{{--    ^ punctuation.section.arguments.begin.blade --}}
+{{--     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.php.embedded.blade --}}
+{{--     ^^^^^^^^^^^^^^^^^^^ meta.string.php string.quoted.single.php --}}
+{{--                        ^ punctuation.separator.sequence.php --}}
+{{--                          ^^^^^^^^^^^^^ meta.string.php string.quoted.single.php --}}
+{{--                                       ^ punctuation.section.arguments.end.blade --}}
+
 {{-- Define Blade Layout --}}
 
     <html>
@@ -1102,6 +1116,85 @@
 {{--   ^ punctuation.section.arguments.begin.blade - source.php --}}
 {{--    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ source.php.embedded.blade --}}
 {{--                                 ^ punctuation.section.arguments.end.blade - source.php --}}
+
+{{-- Coditional Disabled --}}
+
+    <div @disabled($errors->isNotEmpty())>
+{{--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.tag.block --}}
+{{--^ punctuation.definition.tag.begin.html --}}
+{{-- ^^^ entity.name.tag.block.any.html --}}
+{{--     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.embedded.blade source.blade --}}
+{{--     ^^^^^^^^^ meta.directive.blade keyword.control.directive.blade --}}
+{{--     ^ punctuation.definition.keyword.blade --}}
+{{--              ^^^^^^^^^^^^^^^^^^^^^^^ meta.directive.arguments.blade --}}
+{{--              ^ punctuation.section.arguments.begin.blade --}}
+{{--               ^^^^^^^^^^^^^^^^^^^^^ source.php.embedded.blade --}}
+{{--               ^^^^^^^ variable.other.php --}}
+{{--                      ^^ punctuation.accessor.arrow.php --}}
+{{--                        ^^^^^^^^^^ meta.function-call.identifier.php variable.function.php --}}
+{{--                                  ^^ meta.function-call.arguments.php meta.group.php --}}
+{{--                                  ^ punctuation.section.group.begin.php --}}
+{{--                                   ^ punctuation.section.group.end.php --}}
+{{--                                    ^ punctuation.section.arguments.end.blade --}}
+{{--                                     ^ punctuation.definition.tag.end.html --}}
+
+{{-- Coditional Styles --}}
+
+    <span @style(['background-color: red',])>
+{{--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.tag.inline --}}
+{{--^ punctuation.definition.tag.begin.html --}}
+{{-- ^^^^ entity.name.tag.inline.any.html --}}
+{{--      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.embedded.blade source.blade --}}
+{{--      ^^^^^^ meta.directive.blade keyword.control.directive.blade --}}
+{{--      ^ punctuation.definition.keyword.blade --}}
+{{--            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.directive.arguments.blade --}}
+{{--            ^ punctuation.section.arguments.begin.blade --}}
+{{--             ^^^^^^^^^^^^^^^^^^^^^^^^^^ source.php.embedded.blade meta.sequence.array.php --}}
+{{--             ^ punctuation.section.sequence.begin.php --}}
+{{--              ^^^^^^^^^^^^^^^^^^^^^^^ meta.string.php string.quoted.single.php --}}
+{{--                                     ^ punctuation.separator.sequence.php --}}
+{{--                                       ^ punctuation.section.arguments.end.blade --}}
+{{--                                        ^ punctuation.definition.tag.end.html --}}
+
+{{-- Additional Attributes --}}
+
+    <input @readonly($user->isNotAdmin())>
+{{--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.tag.inline --}}
+{{--^ punctuation.definition.tag.begin.html --}}
+{{-- ^^^^^ entity.name.tag.inline.form.html --}}
+{{--       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.embedded.blade source.blade --}}
+{{--       ^^^^^^^^^ meta.directive.blade keyword.control.directive.blade --}}
+{{--       ^ punctuation.definition.keyword.blade --}}
+{{--                ^^^^^^^^^^^^^^^^^^^^^ meta.directive.arguments.blade --}}
+{{--                ^ punctuation.section.arguments.begin.blade --}}
+{{--                 ^^^^^^^^^^^^^^^^^^^ source.php.embedded.blade --}}
+{{--                 ^^^^^ variable.other.php --}}
+{{--                      ^^ punctuation.accessor.arrow.php --}}
+{{--                        ^^^^^^^^^^ meta.function-call.identifier.php variable.function.php --}}
+{{--                                  ^^ meta.function-call.arguments.php meta.group.php --}}
+{{--                                  ^ punctuation.section.group.begin.php --}}
+{{--                                   ^ punctuation.section.group.end.php --}}
+{{--                                    ^ punctuation.section.arguments.end.blade --}}
+{{--                                     ^ punctuation.definition.tag.end.html --}}
+
+    <input @required($user->isNotAdmin())>
+{{--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.tag.inline --}}
+{{--^ punctuation.definition.tag.begin.html --}}
+{{-- ^^^^^ entity.name.tag.inline.form.html --}}
+{{--       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.embedded.blade source.blade --}}
+{{--       ^^^^^^^^^ meta.directive.blade keyword.control.directive.blade --}}
+{{--       ^ punctuation.definition.keyword.blade --}}
+{{--                ^^^^^^^^^^^^^^^^^^^^^ meta.directive.arguments.blade --}}
+{{--                ^ punctuation.section.arguments.begin.blade --}}
+{{--                 ^^^^^^^^^^^^^^^^^^^ source.php.embedded.blade --}}
+{{--                 ^^^^^ variable.other.php --}}
+{{--                      ^^ punctuation.accessor.arrow.php --}}
+{{--                        ^^^^^^^^^^ meta.function-call.identifier.php variable.function.php --}}
+{{--                                  ^^ meta.function-call.arguments.php meta.group.php --}}
+{{--                                  ^ punctuation.section.group.begin.php --}}
+{{--                                   ^ punctuation.section.group.end.php --}}
+{{--                                    ^ punctuation.section.arguments.end.blade --}}
+{{--                                     ^ punctuation.definition.tag.end.html --}}
 
 {{-- https://github.com/Medalink/laravel-blade/issues/185 --}}
 
