@@ -1,38 +1,73 @@
-## Laravel Blade Highlighter
+## Blade
 
-This package adds syntax definitions for the [Laravel](http://www.laravel.com) Blade engine.
+[Laravel Blade Template](http://www.laravel.com) syntax definitions for [Sublime Text](https://www.sublimetext.com) based on its HTML/CSS/JS syntaxes.
 
-*Works with various Sublime Text version, for older/specific versions use older/specific release.*
+_It is a fork of great [Medialink/Laravel Blade Highlighter](https://github.com/Medalink/laravel-blade) which is no longer maintained._
 
-### How to install w/[Sublime Package Control](http://wbond.net/sublime_packages/package_control)
+## Installation
 
-1. Search for Laravel Blade and install it.
-2. Restart Sublime Text.
+### Package Control
+
+The easiest way to install is using [Package Control](https://packagecontrol.io). It's listed as `Laravel Blade`.
+
+1. Open `Command Palette` using <kbd>ctrl+shift+P</kbd> or menu item `Tools → Command Palette...`
+2. Choose `Package Control: Install Package`
+3. Find `Laravel Blade` and hit <kbd>Enter</kbd>
+4. Restart Sublime Text _(e.g.: if A File Icons is installed)_
+5. Reopen any ```.blade``` files.
+
+### Manual Install
+
+1. Download or clone this repository into ```[install-dir]/Packages/Laravel Blade```
+2. Restart Sublime Text _(e.g.: if A File Icons is installed)_
 3. Reopen any ```.blade``` files.
-4. Enjoy :)
 
-### Sublime Text Manual Install
+> [!NOTE]
+>
+> Syntax from `main` branch require Sublime Text 4.
+>
+> For Sublime Text 3 compatible version refer to `st3` branch.
 
-1. Download or clone this repository into ```[install-dir]/Packages/laravel-blade```
-2. Restart Sublime Text.
-3. Reopen any ```.blade``` files.
-4. Enjoy :)
-
-### Yeah but, show me what it is?
-
-![blade-example](https://cloud.githubusercontent.com/assets/499192/8564960/52a7e57c-2551-11e5-8182-1f24a6d8d17a.jpg "blade-example")
-
-*[Predawn](https://github.com/jamiewilson/predawn).*
-
-![blade-example](https://cloud.githubusercontent.com/assets/499192/8564966/68f19076-2551-11e5-9bc2-13d8b0915ffa.jpg "blade-example-2")
-
-*[Material Theme](https://github.com/equinusocio/material-theme).*
-
-#### Supported Extensions
+## Supported Extensions
 
 * [Blade Extensions Laravel Package](https://github.com/RobinRadic/blade-extensions)
 
-#### How to Contribute
+## Troubleshooting
+
+### §1 Syntax Definition Parse Errors
+
+Blade extends Sublime Text's HTML syntax definition.
+
+If Blade syntax highlighting doesn't work 
+and console displays syntax errors in _HTML (Blade).sublime-syntax_,
+please make sure to remove any out-dated syntax override.
+
+Steps:
+
+1. call _Menu > Preferences > Browse Packages.._
+2. Look for _HTML_ folder
+3. Remove it or at least delete any syntax definition in it.
+
+### §2 Scripts are not correctly highlighted
+
+Blade relies on JavaScript (`source.js`), JSX (`source.jsx`), 
+TypeScript (`source.ts`) and TSX (`source.tsx`)
+to scope script blocks and inline scripts.
+
+Make sure to remove related out-dated syntax packages,
+which don't meet least compatibility requirements.
+
+They can be identified by calling 
+e.g. `sublime.find_syntax_by_scope("source.ts")` in ST's console.
+
+Known candidates are:
+
+- [JavaScriptNext - ES6 Syntax](https://packagecontrol.io/packages/JavaScriptNext%20-%20ES6%20Syntax)
+- [Naomi](https://github.com/borela/naomi)
+- [TypeScript](https://packagecontrol.io/packages/TypeScript)
+- [TypeScript Syntax](https://packagecontrol.io/packages/TypeScript%20Syntax)
+
+## How to Contribute
 
 * To test a local version of the highlighter first uninstall the highlighter from package control.
 * Follow the manual installation process by cloning the repo into your packages directory.
