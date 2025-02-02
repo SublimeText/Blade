@@ -9,6 +9,23 @@ extends: Packages/PHP/CSS (PHP).sublime-syntax
 file_extensions:
   - blade.css
 
+variables:
+
+  # CSS overrides
+
+  ident_start: (?:{{nmstart}}|{{interpolation_start}})
+
+  # required until ST4173
+  selector_begin: (?={{selector_start}}|{{interpolation_start}})
+  # required until ST4173
+  nested_selector_begin: (?={{nested_selector_start}}|{{interpolation_start}})
+
+  tag_name_begin: (?=[[:alpha:]]|{{interpolation_start}})
+
+  # CSS (Blade) variables
+
+  interpolation_start: (?:{{(?!--)|{!!|@{)
+
 contexts:
 
   main:

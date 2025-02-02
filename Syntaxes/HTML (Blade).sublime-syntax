@@ -12,6 +12,16 @@ file_extensions:
   - blade
   - blade.php
 
+variables:
+
+  # HTML overrides
+
+  tag_name_start: (?:[A-Za-z]|{{interpolation_start}})
+
+  # HTML (Blade) variables
+
+  interpolation_start: (?:{{|{!!|@{)
+
 contexts:
 
 ###[ HTML TAGS ]###############################################################
