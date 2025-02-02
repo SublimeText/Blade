@@ -6,7 +6,7 @@
 /*          ^ - meta.embedded.blade source.blade meta.directive */
 /* ^^^ keyword.control.directive.blade */
 /*    ^ punctuation.section.arguments.begin.blade */
-/*     ^^^^ source.php.embedded.blade constant.language.boolean.php */
+/*     ^^^^ source.php.embedded.blade constant.language.boolean */
 /*         ^ punctuation.section.arguments.end.blade */
 
       var app = {{ Illuminate\Support\Js::from($array) }};

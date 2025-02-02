@@ -194,7 +194,7 @@
 {{--               ^ keyword.operator.assignment.php --}}
 {{--                 ^^^^ variable.other.php --}}
 {{--                      ^^ keyword.operator.null-coalescing.php --}}
-{{--                         ^^^^^ constant.language.boolean.php --}}
+{{--                         ^^^^^ constant.language.boolean --}}
 {{--                              ^ punctuation.section.arguments.end.blade - source.php --}}
 
         @php($bool = $bool ?: true)
@@ -208,7 +208,7 @@
 {{--               ^ keyword.operator.assignment.php --}}
 {{--                 ^^^^^ variable.other.php --}}
 {{--                       ^^ keyword.operator.ternary.php --}}
-{{--                          ^^^^ constant.language.boolean.php --}}
+{{--                          ^^^^ constant.language.boolean --}}
 {{--                              ^ punctuation.section.arguments.end.blade - source.php --}}
     </div>
 
@@ -1200,3 +1200,51 @@
 {{--              ^ punctuation.separator.key-value.html --}}
 {{--               ^^^^^^^^^^^^^^^^^^^^^^^ meta.string.html string.quoted.double.html --}}
 {{--                                      ^ punctuation.definition.tag.end.html --}}
+
+   <x-alert type="error" :message="$message" class="mt-4"/>
+{{--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.tag.other.html --}}
+{{--^^^^^^^ entity.name.tag.other.html --}}
+{{--        ^^^^^^^^^^^^ meta.attribute-with-value.html --}}
+{{--        ^^^^ entity.other.attribute-name.html --}}
+{{--            ^ punctuation.separator.key-value.html --}}
+{{--             ^^^^^^^ meta.string.html string.quoted.double.html --}}
+{{--             ^ punctuation.definition.string.begin.html --}}
+{{--                   ^ punctuation.definition.string.end.html --}}
+{{--                     ^^^^^^^^^^^^^^^^^^^ meta.attribute-with-value.component.blade --}}
+{{--                     ^^^^^^^^ entity.other.attribute-name.component.blade --}}
+{{--                             ^ punctuation.separator.key-value.html --}}
+{{--                              ^^^^^^^^^^ meta.string.html --}}
+{{--                              ^ string.quoted.double.html punctuation.definition.string.begin.html --}}
+{{--                               ^^^^^^^^ meta.embedded.html source.php.embedded.html variable.other.php --}}
+{{--                               ^ punctuation.definition.variable.php --}}
+{{--                                       ^ string.quoted.double.html punctuation.definition.string.end.html --}}
+{{--                                         ^^^^^^^^^^^^ meta.attribute-with-value.class.html --}}
+{{--                                         ^^^^^ entity.other.attribute-name.class.html --}}
+{{--                                              ^ punctuation.separator.key-value.html --}}
+{{--                                               ^ meta.string.html string.quoted.double.html punctuation.definition.string.begin.html --}}
+{{--                                                ^^^^ meta.class-name.html meta.string.html string.quoted.double.html --}}
+{{--                                                    ^ meta.string.html string.quoted.double.html punctuation.definition.string.end.html --}}
+{{--                                                     ^^ punctuation.definition.tag.end.html --}}
+
+   <x-nav-link :active="request()->is('$product')" href="/product">Product</x-nav-link>
+{{--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.tag.other.html --}}
+{{--                                                                      ^^^^^^^^^^^^^ meta.tag.other.html --}}
+{{--^^^^^^^^^^ entity.name.tag.other.html --}}
+{{--           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.attribute-with-value.component.blade --}}
+{{--           ^^^^^^^ entity.other.attribute-name.component.blade --}}
+{{--                  ^ punctuation.separator.key-value.html --}}
+{{--                   ^ meta.string.html string.quoted.double.html punctuation.definition.string.begin.html --}}
+{{--                    ^^^^^^^^^^^^^^^^^^^^^^^^^ meta.string.html meta.embedded.html source.php.embedded.html --}}
+{{--                                             ^ meta.string.html string.quoted.double.html punctuation.definition.string.end.html --}}
+{{--                                              ^ - meta.attribute-with-value --}}
+{{--                                               ^^^^^^^^^^^^^^^ meta.attribute-with-value.href.html --}}
+{{--                                               ^^^^ entity.other.attribute-name.href.html --}}
+{{--                                                   ^ punctuation.separator.key-value.html --}}
+{{--                                                    ^ meta.string.html string.quoted.double.html punctuation.definition.string.begin.html --}}
+{{--                                                     ^^^^^^^^ meta.path.url.html meta.string.html string.quoted.double.html --}}
+{{--                                                     ^ punctuation.separator.path.html --}}
+{{--                                                             ^ meta.string.html string.quoted.double.html punctuation.definition.string.end.html --}}
+{{--                                                              ^ punctuation.definition.tag.end.html --}}
+{{--                                                                      ^^ punctuation.definition.tag.begin.html --}}
+{{--                                                                        ^^^^^^^^^^ entity.name.tag.other.html --}}
+{{--                                                                                  ^ punctuation.definition.tag.end.html --}}
