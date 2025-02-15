@@ -1,1 +1,0 @@
-The package provides syntax definitions for Laravel Blade engine.

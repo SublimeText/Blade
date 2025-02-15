@@ -1,1 +1,0 @@
-Blade Highlighter for Laravel 3
