@@ -76,16 +76,6 @@ Known candidates are:
 - [JavaScriptNext - ES6 Syntax](https://packagecontrol.io/packages/JavaScriptNext%20-%20ES6%20Syntax)
 - [Naomi](https://github.com/borela/naomi)
 
-## How to Contribute
-
-* To test a local version of the highlighter first uninstall the highlighter from package control.
-* Follow the manual installation process by cloning the repo into your packages directory.
-* Restart Sublime Text.
-* Open up the '[install-dir]/Packages/laravel-blade' folder into a new Sublime Text project.
-* Open up the blade.tmLanguage file and make changes.
-* I have provided a test.blade file that holds most of the common uses for testing the regex, use this to verify your changes before and after you make them to ensure the changes you make do not break anything.
-* Send a pull request with a single change per request.
-
 ## Credits
 
 _It is a fork of great [Medialink/Laravel Blade Highlighter](https://github.com/Medalink/laravel-blade)._
