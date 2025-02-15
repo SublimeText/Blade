@@ -2,7 +2,9 @@ name: CI Syntax Tests
 
 on:
   push:
-    push:
+    branches:
+      - main
+    tags-ignore:
       - '**'
     paths:
       - '.github/workflows/ci-syntax-tests.yml'
@@ -10,8 +12,6 @@ on:
       - '**/syntax_test_*'
       - '**.tmPreferences'
   pull_request:
-    branches:
-      - '**'
     paths:
       - '.github/workflows/ci-syntax-tests.yml'
       - '**.sublime-syntax'
@@ -25,15 +25,30 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15 # default is 6 hours!
     strategy:
+      fail-fast: false
       matrix:
         include:
-          - build: 4137
-            default_packages: v4137
+          # Stable ST4 builds
+          - build: 4143
+            default_packages: binary
+          - build: 4152
+            default_packages: binary
+          - build: 4169
+            default_packages: binary
+          - build: 4180
+            default_packages: binary
+          - build: 4192
+            default_packages: binary
+          # Latest dev build (and latest available maybe unreleased syntaxes)
           - build: latest
             default_packages: master
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+        with:
+          path: Laravel Blade
       - uses: SublimeText/syntax-test-action@v2
         with:
           build: ${{ matrix.build }}
+          package_name: Laravel Blade
+          package_root: Laravel Blade
           default_packages: ${{ matrix.default_packages }}
