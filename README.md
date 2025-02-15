@@ -40,6 +40,10 @@ The easiest way to install is using [Package Control](https://packagecontrol.io)
 
 * [Blade Extensions Laravel Package](https://github.com/RobinRadic/blade-extensions)
 
+## Snippets
+
+For Blade related snippets, please install [Blade Snippets](https://packagecontrol.io/packages/Blade%20Snippets) package.
+
 ## Troubleshooting
 
 ### §1 Syntax Definition Parse Errors
