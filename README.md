@@ -62,22 +62,19 @@ Steps:
 
 ### §2 Scripts are not correctly highlighted
 
-Blade relies on JavaScript (`source.js`), JSX (`source.jsx`), 
-TypeScript (`source.ts`) and TSX (`source.tsx`)
+Blade relies on JavaScript (`source.js`)
 to scope script blocks and inline scripts.
 
 Make sure to remove related out-dated syntax packages,
 which don't meet least compatibility requirements.
 
 They can be identified by calling 
-e.g. `sublime.find_syntax_by_scope("source.ts")` in ST's console.
+e.g. `sublime.find_syntax_by_scope("source.js")` in ST's console.
 
 Known candidates are:
 
 - [JavaScriptNext - ES6 Syntax](https://packagecontrol.io/packages/JavaScriptNext%20-%20ES6%20Syntax)
 - [Naomi](https://github.com/borela/naomi)
-- [TypeScript](https://packagecontrol.io/packages/TypeScript)
-- [TypeScript Syntax](https://packagecontrol.io/packages/TypeScript%20Syntax)
 
 ## How to Contribute
 
