@@ -4,7 +4,7 @@
 .gitignore              export-ignore
 *.cmd                   export-ignore
 preview.*               export-ignore
-syntax_test_*           export-ignore
+tests/                  export-ignore
 
 # linguist documentation settings
 messages/*              linguist-documentation
