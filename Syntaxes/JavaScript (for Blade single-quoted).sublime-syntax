@@ -9,7 +9,24 @@ hidden: true
 extends: JavaScript (Blade).sublime-syntax
 
 contexts:
-  prototype:
+  main:
+    - include: expressions
+
+  expressions:
+    # required until PR #4003 (ST4177)
+    - match: (?=\S)
+      push: [ expression-end, expression-begin ]
+
+  field-name:
     - meta_prepend: true
+    - match: (?=')
+      pop: 1
+
+  method-name:
+    - meta_prepend: true
+    - match: (?=')
+      pop: 1
+
+  literal-single-quoted-string:
     - match: (?=')
       pop: 1

@@ -9,11 +9,20 @@ hidden: true
 extends: CSS (Blade).sublime-syntax
 
 contexts:
+  main:
+    - include: rule-list-body
 
-  prototype:
+  quoted-strings:
     - meta_prepend: true
     - match: (?=')
       pop: 1
 
-  main:
-    - include: rule-list-body
+  quoted-string:
+    - meta_prepend: true
+    - match: (?=')
+      pop: 1
+
+  quoted-urls:
+    - meta_prepend: true
+    - match: (?=')
+      pop: 1
