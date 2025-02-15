@@ -1286,6 +1286,25 @@
 {{--                                       ^ punctuation.definition.string.end.html --}}
 {{--                                        ^ meta.tag punctuation.definition.tag.end.html --}}
 
+    <div onclick="{ key: {{ $value }} }">
+{{--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.tag --}}
+{{--     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.attribute-with-value.event.html --}}
+{{--     ^^^^^^^ entity.other.attribute-name --}}
+{{--            ^ punctuation.separator.key-value.html --}}
+{{--             ^ meta.string.html string.quoted.double.html punctuation.definition.string.begin.html --}}
+{{--              ^^^^^^^^^^^^^^^^^^^^^ meta.string.html source.js.embedded.html meta.mapping.js --}}
+{{--              ^ punctuation.section.mapping.begin.js --}}
+{{--                ^^^ meta.mapping.key.js --}}
+{{--                   ^ punctuation.separator.key-value.js --}}
+{{--                     ^^^^^^^^^^^^ meta.interpolation.blade --}}
+{{--                     ^^ punctuation.section.interpolation.begin.blade --}}
+{{--                       ^^^^^^^^ source.php.embedded.blade --}}
+{{--                        ^^^^^^ variable.other.php --}}
+{{--                               ^^ punctuation.section.interpolation.end.blade --}}
+{{--                                  ^ punctuation.section.mapping.end.js --}}
+{{--                                   ^ meta.string.html string.quoted.double.html punctuation.definition.string.end.html --}}
+{{--                                    ^ punctuation.definition.tag.end.html --}}
+
     <button @click="alert('Hello World!')">Say Hi</button>
 {{--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.tag --}}
 {{--        ^^^^^^ meta.embedded.blade source.blade meta.directive.blade variable.function.blade --}}
