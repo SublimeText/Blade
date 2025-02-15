@@ -2,8 +2,6 @@
 
 [Laravel Blade Template](http://www.laravel.com) syntax definitions for [Sublime Text](https://www.sublimetext.com) based on its HTML/CSS/JS syntaxes.
 
-_It is a fork of great [Medialink/Laravel Blade Highlighter](https://github.com/Medalink/laravel-blade) which is no longer maintained._
-
 ![preview](preview.png)
 
 ## Installation
@@ -78,3 +76,7 @@ Known candidates are:
 * Open up the blade.tmLanguage file and make changes.
 * I have provided a test.blade file that holds most of the common uses for testing the regex, use this to verify your changes before and after you make them to ensure the changes you make do not break anything.
 * Send a pull request with a single change per request.
+
+## Credits
+
+_It is a fork of great [Medialink/Laravel Blade Highlighter](https://github.com/Medalink/laravel-blade)._
