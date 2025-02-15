@@ -28,6 +28,14 @@ The easiest way to install is using [Package Control](https://packagecontrol.io)
 >
 > For Sublime Text 3 compatible version refer to `st3` branch.
 
+## Supported Frontend Syntax
+
+* [AlpineJS](https://packagecontrol.io/packages/AlpineJS)
+  
+  To use AlpineJS with Blade templates,
+  1. install AlpineJS package
+  2. follow instructions to create [combined _HTML (Blade, AlpineJS)_ syntax](https://github.com/SublimeText/AlpineJS?tab=readme-ov-file#laravel-blade)
+
 ## Supported Extensions
 
 * [Blade Extensions Laravel Package](https://github.com/RobinRadic/blade-extensions)
