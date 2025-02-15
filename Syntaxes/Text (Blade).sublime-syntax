@@ -9,8 +9,8 @@
 #
 # https://laravel.com/docs/9.x
 # http://www.sublimetext.com/docs/syntax.html
-name: Blade
-scope: source.blade
+name: Text (Blade)
+scope: text.blade
 version: 2
 hidden: true
 

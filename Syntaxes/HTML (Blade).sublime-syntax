@@ -28,7 +28,7 @@ contexts:
 
   prototype:
     - meta_prepend: true
-    - include: Blade.sublime-syntax#blade-embedded
+    - include: Text (Blade).sublime-syntax#blade-embedded
 
   php:
     # This is the main php context.
@@ -39,11 +39,11 @@ contexts:
 
   cdata-content:
     - meta_prepend: true
-    - include: Blade.sublime-syntax#blade-interpolations
+    - include: Text (Blade).sublime-syntax#blade-interpolations
 
   strings-common-content:
     - meta_prepend: true
-    - include: Blade.sublime-syntax#blade-interpolations
+    - include: Text (Blade).sublime-syntax#blade-interpolations
 
 ###[ HTML SCRIPT TAG ]#########################################################
 
@@ -107,8 +107,8 @@ contexts:
 
   tag-attributes:
     - meta_prepend: true
-    - include: Blade.sublime-syntax#blade-php-directives
-    - include: Blade.sublime-syntax#blade-other-directives
+    - include: Text (Blade).sublime-syntax#blade-php-directives
+    - include: Text (Blade).sublime-syntax#blade-other-directives
     - include: tag-blade-attributes
 
   tag-generic-attribute:
@@ -122,7 +122,7 @@ contexts:
 
   tag-attribute-value-content:
     - meta_prepend: true
-    - include: Blade.sublime-syntax#blade-interpolations
+    - include: Text (Blade).sublime-syntax#blade-interpolations
 
 ###[ COMPONENT ATTRIBUTE ]#####################################################
 

@@ -36,12 +36,12 @@ contexts:
 
   prototype:
     - meta_prepend: true
-    - include: Blade.sublime-syntax#blade-embedded
+    - include: Text (Blade).sublime-syntax#blade-embedded
 
   at-other:
     - meta_prepend: true
-    - include: Blade.sublime-syntax#blade-embedded
+    - include: Text (Blade).sublime-syntax#blade-embedded
 
   string-content:
     - meta_prepend: true
-    - include: Blade.sublime-syntax#blade-interpolations
+    - include: Text (Blade).sublime-syntax#blade-interpolations

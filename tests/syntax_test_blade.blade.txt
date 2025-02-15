@@ -1,0 +1,30 @@
+{{-- SYNTAX TEST "Text (Blade).sublime-syntax" --}}
+
+    {{-- This comment will not be in the rendered HTML --}}
+{{--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.embedded.blade comment.block.blade --}}
+{{--^^^^ punctuation.definition.comment.begin.blade --}}
+{{--                                                   ^^^^ punctuation.definition.comment.end.blade --}}
+{{--                                                       ^ - comment --}}
+
+    <div>
+{{--^^^^^ - meta.tag --}}
+
+    <?php echo $name; ?>
+{{--^^^^^^^^^^^^^^^^^^^^ - meta.embedded --}}
+
+    Hello, {{ $name }}.
+{{--^^^^^^^ text.blade - meta.interpolation --}}
+{{--       ^^^^^^^^^^^ text.blade meta.interpolation.blade --}}
+{{--       ^^ punctuation.section.interpolation.begin.blade - source.php --}}
+{{--         ^^^^^^^ source.php.embedded.blade --}}
+{{--          ^^^^^ variable.other.php --}}
+{{--                ^^ punctuation.section.interpolation.end.blade - source.php --}}
+{{--                  ^^ text.blade - meta.interpolation --}}
+
+    @include('header')
+{{--^^^^^^^^ meta.embedded.blade source.blade meta.directive.blade - meta.directive meta.directive --}}
+{{--        ^^^^^^^^^^ meta.embedded.blade source.blade meta.directive.arguments.blade - meta.directive meta.directive --}}
+{{--^^^^^^^^ keyword.control.directive.blade --}}
+{{--        ^ punctuation.section.arguments.begin.blade - source.php --}}
+{{--         ^^^^^^^^ source.php.embedded.blade meta.string.php string.quoted.single.php --}}
+{{--                 ^ punctuation.section.arguments.end.blade - source.php --}}
