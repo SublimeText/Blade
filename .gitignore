@@ -1,3 +1,13 @@
+# MacOS specific ignores
 .DS_Store
-laravel-blade.sublime-project
-laravel-blade.sublime-workspace
+
+# development
+.sublime/
+.venv/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# python cache files
+__pycache__/
+*.pyc

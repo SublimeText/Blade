@@ -1,16 +1,18 @@
 # exclude from sublime-package
-.github/          		export-ignore
-.gitattributes    		export-ignore
-.gitignore        		export-ignore
-*.cmd             		export-ignore
+.github/                export-ignore
+.gitattributes          export-ignore
+.gitignore              export-ignore
+*.cmd                   export-ignore
+preview.*               export-ignore
+syntax_test_*           export-ignore
 
 # linguist documentation settings
-messages/*          	linguist-documentation
-*.blade             	linguist-documentation
-*.blade.php         	linguist-documentation
+messages/*              linguist-documentation
+*.blade                 linguist-documentation
+*.blade.php             linguist-documentation
 
 # linguist language settings
-*.sublime-completions	linguist-language=JSONC
-*.sublime-settings		linguist-language=JSONC
-*.sublime-syntax		linguist-language=YAML
-*.tmPreferences			linguist-language=XML
+*.sublime-completions   linguist-language=JSONC
+*.sublime-settings      linguist-language=JSONC
+*.sublime-syntax        linguist-language=YAML
+*.tmPreferences         linguist-language=XML
