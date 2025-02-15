@@ -4,6 +4,8 @@
 
 _It is a fork of great [Medialink/Laravel Blade Highlighter](https://github.com/Medalink/laravel-blade) which is no longer maintained._
 
+![preview](preview.png)
+
 ## Installation
 
 ### Package Control

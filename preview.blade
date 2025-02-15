@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>@yield('absolute') - nonsense</title>
+	<style>
+		.container {
+			@if ($c->props)
+				background-{{ $c->props['bg'] }}: {{ $c->bgcolor }};
+			@endif
+		}
+	</style>
+</head>
+<body>
+	@section('sidebar')
+	<div class="container" onload="run({{ $c->event(); }})">
+		<x-nav-link
+			:active="request()->is('$target')"
+			href="/target"
+			style="color: {{ "color_$value" }}"
+		>
+			Title
+		</x-nav-link>
+	</div>
+</body>
+</html>
+
+
+
