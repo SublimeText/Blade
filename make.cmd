@@ -16,7 +16,7 @@ goto :usage
 
     :: create tag and download asset for ST4107+
     set branch=main
-    set tag=%version%
+    set tag=4143-%version%
     set archive=%package%-%version%.sublime-package
     set assets="%archive%#%archive%"
     call git push origin %branch%
