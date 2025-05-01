@@ -10,17 +10,14 @@ extends: JavaScript (Blade).sublime-syntax
 
 contexts:
   main:
+    - match: \;
+      scope: punctuation.terminator.statement.js
     - include: expressions
 
   expressions:
     # required until PR #4003 (ST4177)
     - match: (?=\S)
       push: [ expression-end, expression-begin ]
-
-  expression-begin:
-    - meta_prepend: true
-    - match: (?=')
-      pop: 1
 
   field-name:
     - meta_prepend: true

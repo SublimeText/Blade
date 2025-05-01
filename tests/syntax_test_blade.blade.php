@@ -1330,6 +1330,40 @@
 {{--                                   ^ meta.string.html string.quoted.double.html punctuation.definition.string.end.html --}}
 {{--                                    ^ punctuation.definition.tag.end.html --}}
 
+    <button onclick="run('event-{{ $events["name"] }}');$alert ='me'">
+{{--        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.attribute-with-value.event.html --}}
+{{--                ^ meta.string.html string.quoted.double.html punctuation.definition.string.begin.html - source.js --}}
+{{--                 ^^^ meta.string.html source.js.embedded.html meta.function-call variable.function --}}
+{{--                    ^ meta.string.html source.js.embedded.html meta.function-call meta.group.js punctuation.section.group.begin.js --}}
+{{--                     ^^^^^^^ meta.string.html source.js.embedded.html meta.function-call meta.group.js meta.string.js string.quoted.single.js - meta.interpolation --}}
+{{--                            ^^^^^^^^^^^^^^^^^^^^^ meta.string.html source.js.embedded.html meta.function-call meta.group.js meta.string.js meta.interpolation.blade --}}
+{{--                                                 ^ meta.string.html source.js.embedded.html meta.function-call meta.group.js meta.string.js string.quoted.single.js punctuation.definition.string.end.js - meta.interpolation --}}
+{{--                                                  ^ meta.string.html source.js.embedded.html meta.function-call meta.group.js punctuation.section.group.end.js --}}
+{{--                                                   ^^^^^^^^^^^^^ meta.string.html source.js.embedded.html --}}
+{{--                                                   ^ punctuation.terminator.statement.js --}}
+{{--                                                    ^^^^^^ variable.other.dollar.js --}}
+{{--                                                           ^ keyword.operator.assignment.js --}}
+{{--                                                            ^^^^ meta.string.js string.quoted.single.js --}}
+{{--                                                                ^ meta.string.html string.quoted.double.html punctuation.definition.string.end.html - source.js --}}
+{{--                                                                 ^ punctuation.definition.tag.end.html --}}
+
+    <button onclick='run("event-{{ $events['name'] }}");$alert ="me"'>
+{{--        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.attribute-with-value.event.html --}}
+{{--                ^ meta.string.html string.quoted.single.html punctuation.definition.string.begin.html - source.js --}}
+{{--                 ^^^ meta.string.html source.js.embedded.html meta.function-call variable.function --}}
+{{--                    ^ meta.string.html source.js.embedded.html meta.function-call meta.group.js punctuation.section.group.begin.js --}}
+{{--                     ^^^^^^^ meta.string.html source.js.embedded.html meta.function-call meta.group.js meta.string.js string.quoted.double.js - meta.interpolation --}}
+{{--                            ^^^^^^^^^^^^^^^^^^^^^ meta.string.html source.js.embedded.html meta.function-call meta.group.js meta.string.js meta.interpolation.blade --}}
+{{--                                                 ^ meta.string.html source.js.embedded.html meta.function-call meta.group.js meta.string.js string.quoted.double.js punctuation.definition.string.end.js - meta.interpolation --}}
+{{--                                                  ^ meta.string.html source.js.embedded.html meta.function-call meta.group.js punctuation.section.group.end.js --}}
+{{--                                                   ^^^^^^^^^^^^^ meta.string.html source.js.embedded.html --}}
+{{--                                                   ^ punctuation.terminator.statement.js --}}
+{{--                                                    ^^^^^^ variable.other.dollar.js --}}
+{{--                                                           ^ keyword.operator.assignment.js --}}
+{{--                                                            ^^^^ meta.string.js string.quoted.double.js --}}
+{{--                                                                ^ meta.string.html string.quoted.single.html punctuation.definition.string.end.html - source.js --}}
+{{--                                                                 ^ punctuation.definition.tag.end.html --}}
+
     <button @click="alert('Hello World!')">Say Hi</button>
 {{--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.tag --}}
 {{--        ^^^^^^ meta.embedded.blade source.blade meta.directive.blade variable.function.blade --}}
