@@ -1286,6 +1286,31 @@
 {{--                                       ^ punctuation.definition.string.end.html --}}
 {{--                                        ^ meta.tag punctuation.definition.tag.end.html --}}
 
+    <div onclick="$wire.step === {{ $screen['Step'] }}">
+{{--^^^^^ meta.tag.block.any.html - meta.attribute-with-value --}}
+{{--     ^^^^^^^^ meta.tag.block.any.html meta.attribute-with-value.event.html - meta.string --}}
+{{--             ^ meta.tag.block.any.html meta.attribute-with-value.event.html meta.string.html - source --}}
+{{--              ^^^^^^^^^^^^^^^ meta.tag.block.any.html meta.attribute-with-value.event.html meta.string.html source.js.embedded.html - meta.interpolation --}}
+{{--                             ^^^^^^^^^^^^^^^^^^^^^ meta.tag.block.any.html meta.attribute-with-value.event.html meta.string.html source.js.embedded.html meta.interpolation.blade --}}
+{{--                                                  ^ meta.tag.block.any.html meta.attribute-with-value.event.html meta.string.html - source --}}
+{{--                                                   ^ meta.tag.block.any.html - meta.attribute-with-value --}}
+{{--     ^^^^^^^ entity.other.attribute-name.event.html --}}
+{{--            ^ punctuation.separator.key-value.html --}}
+{{--             ^ string.quoted.double.html punctuation.definition.string.begin.html --}}
+{{--                             ^^ punctuation.section.interpolation.begin.blade --}}
+{{--                               ^^^^^^^^^^^^^^^^^ source.php.embedded.blade --}}
+{{--                                ^^^^^^^ variable.other.php --}}
+{{--                                ^ punctuation.definition.variable.php --}}
+{{--                                       ^^^^^^^^ meta.item-access.php --}}
+{{--                                       ^ punctuation.section.brackets.begin.php --}}
+{{--                                        ^^^^^^ meta.string.php string.quoted.single.php --}}
+{{--                                        ^ punctuation.definition.string.begin.php --}}
+{{--                                             ^ punctuation.definition.string.end.php --}}
+{{--                                              ^ punctuation.section.brackets.end.php --}}
+{{--                                                ^^ punctuation.section.interpolation.end.blade --}}
+{{--                                                  ^ string.quoted.double.html punctuation.definition.string.end.html --}}
+{{--                                                   ^ punctuation.definition.tag.end.html --}}
+
     <div onclick="{ key: {{ $value }} }">
 {{--^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.tag --}}
 {{--     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ meta.attribute-with-value.event.html --}}
