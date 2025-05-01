@@ -10,6 +10,8 @@ extends: JavaScript (Blade).sublime-syntax
 
 contexts:
   main:
+    - match: \;
+      scope: punctuation.terminator.statement.js
     - include: expressions
 
   expressions:
@@ -17,7 +19,7 @@ contexts:
     - match: (?=\S)
       push: [ expression-end, expression-begin ]
 
-  expression-begin:
+  expression-break:
     - meta_prepend: true
     - match: (?=")
       pop: 1
@@ -32,6 +34,6 @@ contexts:
     - match: (?=")
       pop: 1
 
-  literal-single-quoted-string:
+  literal-double-quoted-string:
     - match: (?=")
       pop: 1
